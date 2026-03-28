@@ -1,6 +1,9 @@
 const express = require("express");
 
 const app = express();
+app.get('/', (req, res) => {
+  res.send("Server is working 🚀");
+});
 app.use(express.json());
 
 const VERIFY_TOKEN = "test123";
