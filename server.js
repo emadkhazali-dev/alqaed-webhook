@@ -56,7 +56,12 @@ app.get("/webhook", (req, res) => {
 });
 
 // ✅ استقبال الرسائل + تخزينها
-app.post("/webhook", async (req, res) => {
+app.post('/webhook', (req, res) => {
+  console.log("===== NEW EVENT =====");
+  console.log(JSON.stringify(req.body, null, 2));
+
+  res.sendStatus(200);
+});
   try {
     console.log("📩 NEW EVENT:");
 
