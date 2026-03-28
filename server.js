@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// ✅ Postgres connection
+// Postgres connection
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: {
@@ -15,7 +15,7 @@ const pool = new Pool({
   },
 });
 
-// ✅ إنشاء جدول
+// إنشاء الجدول
 async function initDb() {
   await pool.query(`
     CREATE TABLE IF NOT EXISTS orders (
@@ -36,12 +36,12 @@ async function initDb() {
 
 const VERIFY_TOKEN = "test123";
 
-// ✅ الصفحة الرئيسية
+// الصفحة الرئيسية
 app.get("/", (req, res) => {
   res.send("AL_QAED SERVER WORKING 🚀");
 });
 
-// ✅ webhook verification
+// webhook verification
 app.get("/webhook", (req, res) => {
   const mode = req.query["hub.mode"];
   const token = req.query["hub.verify_token"];
@@ -50,20 +50,16 @@ app.get("/webhook", (req, res) => {
   if (mode === "subscribe" && token === VERIFY_TOKEN) {
     console.log("✅ WEBHOOK VERIFIED");
     return res.status(200).send(challenge);
-  } else {
-    return res.sendStatus(403);
   }
+
+  return res.sendStatus(403);
 });
 
-// ✅ استقبال الرسائل + تخزينها
-app.post('/webhook', (req, res) => {
-  console.log("===== NEW EVENT =====");
-  console.log(JSON.stringify(req.body, null, 2));
-
-  res.sendStatus(200);
-});
+// استقبال الرسائل + تخزينها
+app.post("/webhook", async (req, res) => {
   try {
-    console.log("📩 NEW EVENT:");
+    console.log("===== NEW EVENT =====");
+    console.log(JSON.stringify(req.body, null, 2));
 
     const body = req.body;
 
@@ -85,7 +81,7 @@ app.post('/webhook', (req, res) => {
           const messageId = msg.id || null;
           const phone = msg.from || null;
 
-          const contact = contacts.find(c => c.wa_id === phone);
+          const contact = contacts.find((c) => c.wa_id === phone);
           const name = contact?.profile?.name || null;
 
           let text = "";
@@ -111,14 +107,14 @@ app.post('/webhook', (req, res) => {
       }
     }
 
-    res.sendStatus(200);
+    return res.sendStatus(200);
   } catch (err) {
     console.error("❌ ERROR:", err);
-    res.sendStatus(500);
+    return res.sendStatus(500);
   }
 });
 
-// ✅ API للواجهة
+// API للواجهة
 app.get("/api/orders", async (req, res) => {
   try {
     const result = await pool.query(`
@@ -128,7 +124,7 @@ app.get("/api/orders", async (req, res) => {
       LIMIT 50
     `);
 
-    const orders = result.rows.map(row => ({
+    const orders = result.rows.map((row) => ({
       id: row.id,
       customer: row.customer_name || row.customer_phone,
       driver: row.driver_name,
@@ -139,16 +135,20 @@ app.get("/api/orders", async (req, res) => {
 
     res.json(orders);
   } catch (err) {
-    console.error(err);
+    console.error("❌ API ERROR:", err);
     res.status(500).json({ error: "DB error" });
   }
 });
 
-// ❗ التشغيل بعد تهيئة DB
 const PORT = process.env.PORT || 8080;
 
-initDb().then(() => {
-  app.listen(PORT, () => {
-    console.log(`🚀 Server running on port ${PORT}`);
+initDb()
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`🚀 Server running on port ${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.error("❌ Failed to initialize DB:", err);
+    process.exit(1);
   });
-});
