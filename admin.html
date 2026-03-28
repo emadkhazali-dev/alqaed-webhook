@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>القائد | لوحة القائد</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Cairo', sans-serif; }
+    body { background: #0b1120; }
+    .glass { background: rgba(15, 23, 42, 0.72); backdrop-filter: blur(10px); }
+    .card-border { border: 1px solid rgba(148, 163, 184, 0.12); }
+    .soft-shadow { box-shadow: 0 10px 35px rgba(2, 6, 23, 0.35); }
+    .scrollbar-thin::-webkit-scrollbar { width: 8px; height: 8px; }
+    .scrollbar-thin::-webkit-scrollbar-thumb { background: #334155; border-radius: 999px; }
+    .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+  </style>
+</head>
+<body class="text-slate-100">
+<h1>TEST</h1>
+  <div class="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <aside class="hidden xl:flex xl:w-72 2xl:w-80 flex-col border-l border-slate-800 bg-slate-950/90">
+        <div class="px-6 py-6 border-b border-slate-800">
+          <div class="flex items-center gap-3">
+            <div class="h-12 w-12 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-xl font-extrabold text-white soft-shadow">
+              ق
+            </div>
+            <div>
+              <h1 class="text-2xl font-extrabold tracking-tight">القائد</h1>
+              <p class="text-sm text-slate-400">منصة القيادة التنفيذية</p>
+            </div>
+          </div>
+        </div>
+
+        <nav class="flex-1 overflow-y-auto scrollbar-thin px-4 py-5 space-y-6">
+          <div>
+            <p class="px-3 mb-3 text-xs font-bold tracking-widest text-slate-500">الرئيسية</p>
+            <div class="space-y-2">
+              <a href="#" class="flex items-center justify-between rounded-2xl bg-blue-600/15 border border-blue-500/30 px-4 py-3 text-blue-300">
+                <span class="font-semibold">لوحة القائد</span>
+                <span class="text-xs bg-blue-500/20 px-2 py-1 rounded-full">نشط</span>
+              </a>
+              <a href="#" class="flex items-center justify-between rounded-2xl px-4 py-3 text-slate-300 hover:bg-slate-800/80 transition">
+                <span>الطلبات</span>
+                <span class="text-xs text-slate-500">248</span>
+              </a>
+              <a href="#" class="flex items-center justify-between rounded-2xl px-4 py-3 text-slate-300 hover:bg-slate-800/80 transition">
+                <span>العملاء</span>
+                <span class="text-xs text-slate-500">1,284</span>
+              </a>
+              <a href="#" class="flex items-center justify-between rounded-2xl px-4 py-3 text-slate-300 hover:bg-slate-800/80 transition">
+                <span>السائقون والمركبات</span>
+                <span class="text-xs text-slate-500">86</span>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <p class="px-3 mb-3 text-xs font-bold tracking-widest text-slate-500">التشغيل</p>
+            <div class="space-y-2">
+              <a href="#" class="flex items-center justify-between rounded-2xl px-4 py-3 text-slate-300 hover:bg-slate-800/80 transition">
+                <span>المالية</span>
+                <span class="text-emerald-400 text-xs">جيد</span>
+              </a>
+              <a href="#" class="flex items-center justify-between rounded-2xl px-4 py-3 text-slate-300 hover:bg-slate-800/80 transition">
+                <span>الإشعارات</span>
+                <span class="text-xs bg-red-500/20 text-red-300 px-2 py-1 rounded-full">12</span>
+              </a>
+              <a href="#" class="flex items-center justify-between rounded-2xl px-4 py-3 text-slate-300 hover:bg-slate-800/80 transition">
+                <span>الرسائل</span>
+                <span class="text-xs text-slate-500">جديد</span>
+              </a>
+              <a href="#" class="flex items-center justify-between rounded-2xl px-4 py-3 text-slate-300 hover:bg-slate-800/80 transition">
+                <span>الشكاوى</span>
+                <span class="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded-full">8</span>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <p class="px-3 mb-3 text-xs font-bold tracking-widest text-slate-500">الإدارة</p>
+            <div class="space-y-2">
+              <a href="#" class="flex items-center rounded-2xl px-4 py-3 text-slate-300 hover:bg-slate-800/80 transition">التقارير</a>
+              <a href="#" class="flex items-center rounded-2xl px-4 py-3 text-slate-300 hover:bg-slate-800/80 transition">إدارة المستخدمين</a>
+              <a href="#" class="flex items-center rounded-2xl px-4 py-3 text-slate-300 hover:bg-slate-800/80 transition">الإعدادات</a>
+            </div>
+          </div>
+        </nav>
+
+        <div class="p-4 border-t border-slate-800">
+          <div class="rounded-2xl bg-slate-900 border border-slate-800 p-4">
+            <p class="text-sm text-slate-400">الحساب الحالي</p>
+            <div class="mt-3 flex items-center gap-3">
+              <div class="h-11 w-11 rounded-2xl bg-blue-600 flex items-center justify-center font-bold">ا</div>
+              <div>
+                <p class="font-bold">عماد أبو خالد</p>
+                <p class="text-xs text-slate-400">مدير تنفيذي</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main -->
+      <main class="flex-1">
+        <!-- Topbar -->
+        <header class="sticky top-0 z-30 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur">
+          <div class="px-4 md:px-8 py-4 flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
+            <div>
+              <p class="text-sm text-blue-400 font-semibold">لوحة القائد</p>
+              <h2 class="text-2xl md:text-3xl font-extrabold">مركز القيادة التنفيذية</h2>
+              <p class="text-sm text-slate-400 mt-1">متابعة العمليات والطلبات والمالية والتنبيهات من مكان واحد.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-3 md:items-center">
+              <div class="relative">
+                <input type="text" placeholder="ابحث عن طلب، عميل، أو سائق..." class="w-full md:w-80 rounded-2xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-slate-200 placeholder:text-slate-500 outline-none focus:border-blue-500">
+              </div>
+              <button class="rounded-2xl border border-slate-700 bg-slate-900 px-4 py-3 text-sm font-semibold hover:bg-slate-800 transition">الإشعارات 12</button>
+              <button class="rounded-2xl bg-blue-600 px-5 py-3 text-sm font-bold text-white hover:bg-blue-500 transition soft-shadow">+ إجراء سريع</button>
+            </div>
+          </div>
+        </header>
+
+        <div class="p-4 md:p-8 space-y-8">
+          <!-- Hero -->
+          <section class="relative overflow-hidden rounded-3xl border border-slate-800 bg-gradient-to-r from-slate-900 via-blue-950/60 to-slate-900 p-6 md:p-8 soft-shadow">
+            <div class="absolute top-0 left-0 h-40 w-40 rounded-full bg-blue-500/10 blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 h-48 w-48 rounded-full bg-cyan-400/10 blur-3xl"></div>
+            <div class="relative flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+              <div class="max-w-2xl">
+                <p class="inline-flex rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-xs font-bold text-blue-300">نظرة تنفيذية مباشرة</p>
+                <h3 class="mt-4 text-3xl md:text-4xl font-extrabold leading-tight">أهلاً بك في <span class="text-blue-400">القائد</span></h3>
+                <p class="mt-3 text-slate-300 leading-8">واجهة احترافية ثقيلة تساعدك على رؤية ما يحدث الآن: الطلبات النشطة، الأداء اليومي، الشكاوى، والتدفقات المالية، بدون تشتت وبدون ازدحام.</p>
+                <div class="mt-5 flex flex-wrap gap-3">
+                  <button class="rounded-2xl bg-blue-600 px-5 py-3 text-sm font-bold hover:bg-blue-500 transition">إنشاء طلب جديد</button>
+                  <button class="rounded-2xl border border-slate-700 bg-slate-900/80 px-5 py-3 text-sm font-bold text-slate-200 hover:bg-slate-800 transition">مراجعة الطلبات</button>
+                  <button class="rounded-2xl border border-slate-700 bg-slate-900/80 px-5 py-3 text-sm font-bold text-slate-200 hover:bg-slate-800 transition">عرض التقارير</button>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4 min-w-[280px]">
+                <div class="glass card-border rounded-3xl p-4">
+                  <p class="text-sm text-slate-400">الأرباح اليوم</p>
+                  <p class="mt-2 text-2xl font-extrabold">4,850 د.أ</p>
+                  <p class="mt-2 text-xs text-emerald-400">+8.2% مقارنة بالأمس</p>
+                </div>
+                <div class="glass card-border rounded-3xl p-4">
+                  <p class="text-sm text-slate-400">الطلبات النشطة</p>
+                  <p class="mt-2 text-2xl font-extrabold">64</p>
+                  <p class="mt-2 text-xs text-blue-400">متابعة مباشرة</p>
+                </div>
+                <div class="glass card-border rounded-3xl p-4">
+                  <p class="text-sm text-slate-400">الالتزام</p>
+                  <p class="mt-2 text-2xl font-extrabold">96%</p>
+                  <p class="mt-2 text-xs text-emerald-400">أداء ممتاز</p>
+                </div>
+                <div class="glass card-border rounded-3xl p-4">
+                  <p class="text-sm text-slate-400">التنبيهات الحرجة</p>
+                  <p class="mt-2 text-2xl font-extrabold">3</p>
+                  <p class="mt-2 text-xs text-amber-400">تحتاج مراجعة</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- KPI Cards -->
+          <section>
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <h3 class="text-xl font-extrabold">أداء اليوم</h3>
+                <p class="text-sm text-slate-400 mt-1">مؤشرات سريعة لاتخاذ القرار بشكل أسرع.</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-4">
+              <div class="rounded-3xl bg-slate-900 border border-slate-800 p-5 soft-shadow">
+                <div class="flex items-start justify-between">
+                  <div>
+                    <p class="text-sm text-slate-400">إجمالي الطلبات اليوم</p>
+                    <p class="mt-3 text-3xl font-extrabold">248</p>
+                  </div>
+                  <span class="rounded-2xl bg-blue-500/10 text-blue-300 px-3 py-1 text-xs font-bold">+12.4%</span>
+                </div>
+                <p class="mt-4 text-sm text-slate-400">ارتفاع واضح في حجم التشغيل خلال الفترة الصباحية.</p>
+              </div>
+
+              <div class="rounded-3xl bg-slate-900 border border-slate-800 p-5 soft-shadow">
+                <div class="flex items-start justify-between">
+                  <div>
+                    <p class="text-sm text-slate-400">طلبات قيد التنفيذ</p>
+                    <p class="mt-3 text-3xl font-extrabold">64</p>
+                  </div>
+                  <span class="rounded-2xl bg-cyan-500/10 text-cyan-300 px-3 py-1 text-xs font-bold">مباشر</span>
+                </div>
+                <p class="mt-4 text-sm text-slate-400">مراقبة الأداء اللحظي لفرق التوصيل والسائقين.</p>
+              </div>
+
+              <div class="rounded-3xl bg-slate-900 border border-slate-800 p-5 soft-shadow">
+                <div class="flex items-start justify-between">
+                  <div>
+                    <p class="text-sm text-slate-400">الشكاوى المفتوحة</p>
+                    <p class="mt-3 text-3xl font-extrabold">8</p>
+                  </div>
+                  <span class="rounded-2xl bg-amber-500/10 text-amber-300 px-3 py-1 text-xs font-bold">تحتاج متابعة</span>
+                </div>
+                <p class="mt-4 text-sm text-slate-400">حافظ على معالجة الشكاوى بسرعة لتقليل التصعيد.</p>
+              </div>
+
+              <div class="rounded-3xl bg-slate-900 border border-slate-800 p-5 soft-shadow">
+                <div class="flex items-start justify-between">
+                  <div>
+                    <p class="text-sm text-slate-400">الرصيد الحالي</p>
+                    <p class="mt-3 text-3xl font-extrabold">12,300 د.أ</p>
+                  </div>
+                  <span class="rounded-2xl bg-emerald-500/10 text-emerald-300 px-3 py-1 text-xs font-bold">مستقر</span>
+                </div>
+                <p class="mt-4 text-sm text-slate-400">الوضع المالي جيد مع نمو ثابت في العوائد اليومية.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Middle Grid -->
+          <section class="grid grid-cols-1 2xl:grid-cols-3 gap-6">
+            <!-- Orders Table -->
+            <div class="2xl:col-span-2 rounded-3xl bg-slate-900 border border-slate-800 p-5 soft-shadow overflow-hidden">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-5">
+                <div>
+                  <h3 class="text-xl font-extrabold">آخر الطلبات</h3>
+                  <p class="text-sm text-slate-400 mt-1">مراقبة تنفيذ الطلبات والحالات الحالية.</p>
+                </div>
+                <div class="flex gap-2 flex-wrap">
+                  <button class="rounded-2xl border border-slate-700 bg-slate-800 px-4 py-2 text-sm">فلترة</button>
+                  <button class="rounded-2xl border border-slate-700 bg-slate-800 px-4 py-2 text-sm">تصدير</button>
+                </div>
+              </div>
+
+              <div class="overflow-x-auto scrollbar-thin">
+                <table class="w-full min-w-[760px] text-sm">
+                  <thead>
+                    <tr class="text-right text-slate-400 border-b border-slate-800">
+                      <th class="pb-4 font-semibold">رقم الطلب</th>
+                      <th class="pb-4 font-semibold">العميل</th>
+                      <th class="pb-4 font-semibold">السائق</th>
+                      <th class="pb-4 font-semibold">الحالة</th>
+                      <th class="pb-4 font-semibold">القيمة</th>
+                      <th class="pb-4 font-semibold">الوقت</th>
+                      <th class="pb-4 font-semibold">الإجراء</th>
+                    </tr>
+                  </thead>
+                  <tbody id="orders-table-body" class="divide-y divide-slate-800">
+                    <tr>
+                      <td class="py-4 font-bold text-slate-100">#ORD-1024</td>
+                      <td class="py-4 text-slate-300">شركة الريادة</td>
+                      <td class="py-4 text-slate-300">أحمد ناصر</td>
+                      <td class="py-4"><span class="rounded-full bg-cyan-500/10 text-cyan-300 px-3 py-1 text-xs font-bold">قيد التنفيذ</span></td>
+                      <td class="py-4 text-slate-300">48 د.أ</td>
+                      <td class="py-4 text-slate-400">منذ 12 دقيقة</td>
+                      <td class="py-4"><button class="text-blue-400 font-bold">عرض</button></td>
+                    </tr>
+                    <tr>
+                      <td class="py-4 font-bold text-slate-100">#ORD-1023</td>
+                      <td class="py-4 text-slate-300">مستودع العاصمة</td>
+                      <td class="py-4 text-slate-300">محمد علي</td>
+                      <td class="py-4"><span class="rounded-full bg-emerald-500/10 text-emerald-300 px-3 py-1 text-xs font-bold">مكتمل</span></td>
+                      <td class="py-4 text-slate-300">72 د.أ</td>
+                      <td class="py-4 text-slate-400">منذ 20 دقيقة</td>
+                      <td class="py-4"><button class="text-blue-400 font-bold">عرض</button></td>
+                    </tr>
+                    <tr>
+                      <td class="py-4 font-bold text-slate-100">#ORD-1022</td>
+                      <td class="py-4 text-slate-300">صيدلية المدينة</td>
+                      <td class="py-4 text-slate-300">سليم خالد</td>
+                      <td class="py-4"><span class="rounded-full bg-amber-500/10 text-amber-300 px-3 py-1 text-xs font-bold">متأخر</span></td>
+                      <td class="py-4 text-slate-300">31 د.أ</td>
+                      <td class="py-4 text-slate-400">منذ 36 دقيقة</td>
+                      <td class="py-4"><button class="text-blue-400 font-bold">عرض</button></td>
+                    </tr>
+                    <tr>
+                      <td class="py-4 font-bold text-slate-100">#ORD-1021</td>
+                      <td class="py-4 text-slate-300">معرض الشمال</td>
+                      <td class="py-4 text-slate-300">رامي يوسف</td>
+                      <td class="py-4"><span class="rounded-full bg-red-500/10 text-red-300 px-3 py-1 text-xs font-bold">ملغي</span></td>
+                      <td class="py-4 text-slate-300">19 د.أ</td>
+                      <td class="py-4 text-slate-400">منذ 55 دقيقة</td>
+                      <td class="py-4"><button class="text-blue-400 font-bold">عرض</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Activity -->
+            <div class="rounded-3xl bg-slate-900 border border-slate-800 p-5 soft-shadow">
+              <div class="mb-5">
+                <h3 class="text-xl font-extrabold">النشاط المباشر</h3>
+                <p class="text-sm text-slate-400 mt-1">آخر الأحداث داخل المنصة.</p>
+              </div>
+
+              <div class="space-y-4">
+                <div class="flex gap-3">
+                  <div class="mt-1 h-3 w-3 rounded-full bg-blue-400"></div>
+                  <div class="border-b border-slate-800 pb-4 w-full">
+                    <p class="font-semibold">تم إنشاء طلب جديد</p>
+                    <p class="text-sm text-slate-400 mt-1">شركة الريادة أنشأت طلباً جديداً بقيمة 48 د.أ</p>
+                    <p class="text-xs text-slate-500 mt-2">منذ 12 دقيقة</p>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <div class="mt-1 h-3 w-3 rounded-full bg-emerald-400"></div>
+                  <div class="border-b border-slate-800 pb-4 w-full">
+                    <p class="font-semibold">تم إغلاق شكوى</p>
+                    <p class="text-sm text-slate-400 mt-1">تم حل شكوى العميل بنجاح وإرسال إشعار تأكيد.</p>
+                    <p class="text-xs text-slate-500 mt-2">منذ 24 دقيقة</p>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <div class="mt-1 h-3 w-3 rounded-full bg-amber-400"></div>
+                  <div class="border-b border-slate-800 pb-4 w-full">
+                    <p class="font-semibold">تنبيه تأخير</p>
+                    <p class="text-sm text-slate-400 mt-1">الطلب #ORD-1022 تجاوز الزمن المتوقع للتسليم.</p>
+                    <p class="text-xs text-slate-500 mt-2">منذ 36 دقيقة</p>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <div class="mt-1 h-3 w-3 rounded-full bg-cyan-400"></div>
+                  <div class="w-full">
+                    <p class="font-semibold">تم تحديث الرصيد</p>
+                    <p class="text-sm text-slate-400 mt-1">إضافة دفعة مالية جديدة إلى الحساب الرئيسي.</p>
+                    <p class="text-xs text-slate-500 mt-2">منذ ساعة</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Bottom Grid -->
+          <section class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+            <!-- Analytics Mock -->
+            <div class="xl:col-span-2 rounded-3xl bg-slate-900 border border-slate-800 p-5 soft-shadow">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+                <div>
+                  <h3 class="text-xl font-extrabold">التحليلات التشغيلية</h3>
+                  <p class="text-sm text-slate-400 mt-1">منحنى نمو الطلبات خلال الأسبوع الحالي.</p>
+                </div>
+                <div class="flex gap-2">
+                  <button class="rounded-2xl bg-blue-600 px-4 py-2 text-sm font-bold">أسبوعي</button>
+                  <button class="rounded-2xl border border-slate-700 bg-slate-800 px-4 py-2 text-sm">شهري</button>
+                </div>
+              </div>
+
+              <div class="rounded-3xl border border-slate-800 bg-slate-950/60 p-4">
+                <div class="flex items-end justify-between h-72 gap-3">
+                  <div class="flex-1 flex flex-col items-center gap-3">
+                    <div class="w-full rounded-t-2xl bg-blue-500/80" style="height: 48%"></div>
+                    <span class="text-xs text-slate-500">السبت</span>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center gap-3">
+                    <div class="w-full rounded-t-2xl bg-blue-500/80" style="height: 62%"></div>
+                    <span class="text-xs text-slate-500">الأحد</span>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center gap-3">
+                    <div class="w-full rounded-t-2xl bg-blue-500/80" style="height: 58%"></div>
+                    <span class="text-xs text-slate-500">الاثنين</span>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center gap-3">
+                    <div class="w-full rounded-t-2xl bg-blue-500/80" style="height: 76%"></div>
+                    <span class="text-xs text-slate-500">الثلاثاء</span>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center gap-3">
+                    <div class="w-full rounded-t-2xl bg-blue-500/80" style="height: 66%"></div>
+                    <span class="text-xs text-slate-500">الأربعاء</span>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center gap-3">
+                    <div class="w-full rounded-t-2xl bg-blue-500/80" style="height: 88%"></div>
+                    <span class="text-xs text-slate-500">الخميس</span>
+                  </div>
+                  <div class="flex-1 flex flex-col items-center gap-3">
+                    <div class="w-full rounded-t-2xl bg-cyan-400/90" style="height: 94%"></div>
+                    <span class="text-xs text-slate-300 font-bold">اليوم</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="rounded-3xl bg-slate-900 border border-slate-800 p-5 soft-shadow">
+              <div class="mb-5">
+                <h3 class="text-xl font-extrabold">الإجراءات السريعة</h3>
+                <p class="text-sm text-slate-400 mt-1">اختصارات عملية للوصول السريع.</p>
+              </div>
+
+              <div class="grid grid-cols-1 gap-3">
+                <button class="rounded-2xl bg-blue-600 px-4 py-4 text-right font-bold hover:bg-blue-500 transition">+ إضافة طلب جديد</button>
+                <button class="rounded-2xl border border-slate-700 bg-slate-800 px-4 py-4 text-right font-bold hover:bg-slate-700 transition">+ إضافة مركبة</button>
+                <button class="rounded-2xl border border-slate-700 bg-slate-800 px-4 py-4 text-right font-bold hover:bg-slate-700 transition">+ إرسال إشعار</button>
+                <button class="rounded-2xl border border-slate-700 bg-slate-800 px-4 py-4 text-right font-bold hover:bg-slate-700 transition">+ إنشاء فاتورة</button>
+                <button class="rounded-2xl border border-slate-700 bg-slate-800 px-4 py-4 text-right font-bold hover:bg-slate-700 transition">+ رفع ملف</button>
+              </div>
+
+              <div class="mt-6 rounded-3xl border border-slate-800 bg-slate-950/70 p-4">
+                <p class="text-sm text-slate-400">تنبيه اليوم</p>
+                <p class="mt-2 font-bold leading-7">يوجد 3 تنبيهات حرجة و 8 شكاوى مفتوحة تحتاج متابعة قبل نهاية اليوم.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+<script>
+  function formatTime(dateString) {
+    const date = new Date(dateString);
+    return date.toLocaleString('ar-JO');
+  }
+
+  async function loadOrders() {
+    try {
+      const res = await fetch("https://alqaed-webhook-production.up.railway.app/api/orders");
+      const orders = await res.json();
+
+      const tbody = document.getElementById("orders-table-body");
+      tbody.innerHTML = "";
+
+      if (orders.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="7" class="text-center py-6 text-slate-400">
+              لا توجد طلبات بعد
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      orders.forEach(order => {
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+          <td class="py-4 font-bold text-slate-100">#ORD-${order.id}</td>
+          <td class="py-4 text-slate-300">${order.customer || "-"}</td>
+          <td class="py-4 text-slate-300">${order.driver || "-"}</td>
+          <td class="py-4">
+            <span class="bg-blue-500/10 text-blue-300 px-3 py-1 rounded-full text-xs">
+              ${order.status}
+            </span>
+          </td>
+          <td class="py-4 text-slate-300">${order.amount || 0} د.أ</td>
+          <td class="py-4 text-slate-400">${formatTime(order.time)}</td>
+          <td class="py-4">عرض</td>
+        `;
+
+        tbody.appendChild(row);
+      });
+
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  loadOrders();
+
+  // تحديث تلقائي كل 5 ثواني
+  setInterval(loadOrders, 5000);
+</script>
+</body>
+</html>
